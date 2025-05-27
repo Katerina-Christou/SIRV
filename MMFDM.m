@@ -3,31 +3,31 @@ clear all;
 
 %% --- Parameter Initialization ---
 % Diffusion parameters for each sub-population
-delta_u = 0.01; %Infected diffusion parameter
-delta_z = 0.01; %Susceptible diffusion parameter
-delta_r = 0.01; %Recovered diffusion parameter
-delta_v = 0.01; %Vaccinated diffusion parameter
+delta_u=0.01; %Infected diffusion parameter
+delta_z=0.01; %Susceptible diffusion parameter
+delta_r=0.01; %Recovered diffusion parameter
+delta_v=0.01; %Vaccinated diffusion parameter
 
 % Epidemiological parameters
-beta = 0.75; %Risk of infection
-lambda = 0.20; %Recovery rate of infectious individuals
-alpha = 0.035; %Virus-induced average fatality rate
-epsilon = 0.8; %Vaccine inefficacy
-rho = 0.06; %Vaccination rate
+beta=0.75; %Risk of infection
+lambda=0.20; %Recovery rate of infectious individuals
+alpha=0.035; %Virus-induced average fatality rate
+epsilon=0.8; %Vaccine inefficacy
+rho=0.06; %Vaccination rate
 
 % Advection/Pressure related parameters
-mu = 3; %Interface condition parameter
-Ksi = 0.02; %Cross-diffusion pressure due to self-isolation
-Ksd = 0.002; %Self-diffusion pressure due to social distancing
+mu=3; %Interface condition parameter
+Ksi=0.02; %Cross-diffusion pressure due to self-isolation
+Ks=0.002; %Self-diffusion pressure due to social distancing
 
 %% --- Spatial and Temporal Discretisation ---
-N = 100; %Number of Spatial nodes
-dt = 0.0001; %Time-step value
-T = 37.5; %Final time
-Ntimesteps = T / dt; %Number of timesteps
-dx = 1 / N; %Space-step value
-x = linspace(0, 1, N + 1);
-h = 31; %Interface position
+N=100; %Number of Spatial nodes
+dt=0.0001; %Time-step value
+T=37.5; %Final time
+Ntimesteps=T/dt; %Number of timesteps
+dx=1/N; %Space-step value
+x=linspace(0,1,N+1);
+h=31; %Interface position
 
 %% --- Initial Conditions ---
 %Infected Population density
